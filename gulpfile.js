@@ -35,7 +35,7 @@ function serveScripts(cb) {
     .pipe(gulp.dest('js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('js'));
   cb();
 }
 
@@ -46,7 +46,7 @@ function minifyCustom(cb) {
         ])
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('js'));
    cb();
 }
 
@@ -73,7 +73,7 @@ function serveSass (cb) {
 
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('css'))
         /* Reload the browser CSS after every change */
         .pipe(browserSync.stream());
     cb();
@@ -104,17 +104,11 @@ function mergeStyles(cb) {
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
     cb();
 }
 
-function copyHTML(cb) {
-    gulp.src(['*.html'])
-        .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.stream());
-    cb();
-}
 
 function serve(cb) {
     browserSync.init(['css/*.css', 'js/*.js'], {
@@ -125,8 +119,7 @@ function serve(cb) {
 
     gulp.watch('scss/**/*.scss', serveSass);
     gulp.watch('js/custom.js', minifyCustom);
-    gulp.watch('*.html', copyHTML);
-    // gulp.watch('*.html').on('change', browserSync.reload);
+    gulp.watch('*.html').on('change', browserSync.reload);
     cb();
 }
 
