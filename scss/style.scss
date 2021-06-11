@@ -1649,6 +1649,9 @@ section[data-section="menu"] {
 		height: 400px;
 	}
 }
+
+
+
 .probootstrap-heading {
 	.primary-heading {
 		font-family: $font-secondary;
@@ -1718,7 +1721,7 @@ section[data-section="menu"] {
   		@extend .slider-height;
   		background-size: cover;
   		// background-position: center center;
-  		background-repeat: none;
+  		background-repeat: no-repeat;
   		&.overlay {
 				&:before {
 					content: "";
@@ -2060,5 +2063,64 @@ section[data-section="menu"] {
 	@media screen and (max-width: $screen-sm) {
 		max-width: 100%;
 	}
+}
+
+.flexslider_store, .flexslider_store > .slides > li{
+	box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+	height: 400px;
+	@media screen and (max-width: $screen-xs) {
+		height: 300px;
+	}
+}
+
+.flexslider_reviews, .flexslider_reviews > .slides > li {
+	height: 400px;
+}
+
+.flexslider_reviews {
+	.image-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.image {
+		height: 100px;
+		width: 100px;
+		border-radius: 50px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.flex-direction-nav a {
+		background: transparent;
+	}
+
+	.flex-control-paging li {
+		a {
+			background: #FFA33E;
+		}
+		a.flex-active {
+			background: #8d5508;
+		}
+	}
+
+	.flex-direction-nav a::before {
+		color: rgba(142, 142, 142, 0.8)
+	}
+
+	.flex-control-paging {
+		bottom: 10px
+	}
+}
+
+.review-author {
+	color: #2f2f2f;
+	font-size: 14pt;
+}
+
+.review-text {
+	font-size: 12pt;
+	font-style: italic;
 }
 

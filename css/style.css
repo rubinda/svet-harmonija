@@ -1942,7 +1942,7 @@ section[data-section="menu"] {
 
 .flexslider .slides > li {
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
 }
 
 .flexslider .slides > li.overlay:before {
@@ -2333,4 +2333,68 @@ section[data-section="menu"] {
   .img-xs-responsive {
     max-width: 100%;
   }
+}
+
+.flexslider_store, .flexslider_store > .slides > li {
+  -webkit-box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  height: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  .flexslider_store, .flexslider_store > .slides > li {
+    height: 300px;
+  }
+}
+
+.flexslider_reviews, .flexslider_reviews > .slides > li {
+  height: 400px;
+}
+
+.flexslider_reviews .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flexslider_reviews .image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.flexslider_reviews .flex-direction-nav a {
+  background: transparent;
+}
+
+.flexslider_reviews .flex-control-paging li a {
+  background: #FFA33E;
+}
+
+.flexslider_reviews .flex-control-paging li a.flex-active {
+  background: #8d5508;
+}
+
+.flexslider_reviews .flex-direction-nav a::before {
+  color: rgba(142, 142, 142, 0.8);
+}
+
+.flexslider_reviews .flex-control-paging {
+  bottom: 10px;
+}
+
+.review-author {
+  color: #2f2f2f;
+  font-size: 14pt;
+}
+
+.review-text {
+  font-size: 12pt;
+  font-style: italic;
 }
