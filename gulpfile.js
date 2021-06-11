@@ -113,7 +113,7 @@ function mergeStyles(cb) {
 function serve(cb) {
     browserSync.init(['css/*.css', 'js/*.js'], {
         server: {
-            baseDir: './dist'
+            baseDir: './'
         }
     });
 
