@@ -2074,7 +2074,15 @@ section[data-section="menu"] {
 }
 
 .flexslider_reviews, .flexslider_reviews > .slides > li {
-	height: 400px;
+	height: 350px;
+
+	@media screen and (max-width: 590px) {
+		height: 400px;
+	}
+
+	@media screen and (max-width: $screen-xs) {
+		height: 450px;
+	}
 }
 
 .flexslider_reviews {
@@ -2128,3 +2136,18 @@ section[data-section="menu"] {
 	vertical-align: sub;
 }
 
+.voucher-container {
+	padding: 2rem;
+}
+
+.voucher-image {
+	max-width: 100%;
+	height: auto;
+	box-shadow: rgba(243, 243, 244, 0.2) 0px 7px 29px 0px;
+}
+
+.probootstrap-copyright p.copyright-text {
+	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 5px;
+	}
+}
