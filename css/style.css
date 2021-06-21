@@ -328,9 +328,9 @@ a:hover, a:focus, a:active {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .probootstrap-navbar .navbar-brand {
     position: relative;
-    width: 117px;
+    width: 150px;
     height: 40px;
-    background: url(../img/logo@2x.png) no-repeat left 100%;
+    background: url(../img/logo.svg) no-repeat left 80%;
     background-size: cover;
   }
 }
